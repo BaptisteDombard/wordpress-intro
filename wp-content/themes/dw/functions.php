@@ -15,5 +15,6 @@ register_post_type('trip', [
     'description' => 'Tous les articles qui décrive un voyage',
     'public' => true,
     'menu_position' => 10,
-    'menu_icon' => 'dashicons-palmtree'
+    'menu_icon' => 'dashicons-palmtree',
+    'supports' => ['title','editor','thumbnail']
 ]);
