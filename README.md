@@ -10,3 +10,6 @@ Ce repository représente mon projet test réaliser au cour de dw.
 4. Configurer le fichier `wp-config.php` (et si il n'existe pas, le créer à partir de `wp-config-sample.php`)
 5. Créer une base de données.
 6. Importer le fichier `database.sql` (mise à jour régulièrement pendant la phase de dévelopement).
+
+### Plugin à installer
+- ACF
