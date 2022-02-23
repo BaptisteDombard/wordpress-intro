@@ -2,7 +2,7 @@
 
 Ce repository représente mon projet test réaliser au cour de dw.
 
-##Getting started
+## Getting started
 
 1. cloner ce repository
 2. téléchargez [Wordpress](https://wordpress.org/)
