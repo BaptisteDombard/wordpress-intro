@@ -1,4 +1,10 @@
 <?php
+
+
+//chargez les fichiers nécessaire
+require_once(__DIR__ . './Menus/PrimaryMenuWalker.php');
+require_once(__DIR__ . './Menus/PrimaryMenuItem.php');
+
 //désactiver l'éditeur gutenberg
 add_filter('use_block_editor_for_post', '__return_false');
 
@@ -33,4 +39,53 @@ function dw_get_trips($count = 20)
 
     // 2. on retourne l'objet WP_query
     return $trips;
+}
+
+//enregistrer les zones de Menus
+
+register_nav_menu('primary', 'Navigation principale (haut de page)');
+register_nav_menu('footer', 'Navigation (pied de page)');
+
+//fonction pour récupérez les éléments du menu sous forme d'un tableau d'objet
+
+function dw_get_menu_items($location)
+{
+    $items = [];
+
+    //récupérez le menu Wordpress pour $location
+    $locations = get_nav_menu_locations();
+
+    if ($locations[$location] ?? false){
+        $menu = $locations[$location];
+
+
+        //récupérez tous les éléments du menu réupéré
+        $posts = wp_get_nav_menu_items($menu);
+
+
+        //formater chaque éléments dans une instance de classe personnalisée
+        //boucler sur chaque $post
+        foreach ($posts as $post) {
+            //transformer le WP_post en une instance de notre classe personnaisée
+            $item = new PrimaryMenuItem($post);
+
+            //ajouter cette instance à $items ou à l'item parent si sous-menu
+            if ($item->isSubItem()){
+                //ajouter $item comme "enfant" de l'item parent
+                foreach ($items as $parent){
+                    if ($parent->isParentFor($item)){
+                        $parent->addSubItem();
+                    }
+                }
+            }else{
+                //Ajouter
+                $items[] = $item;
+            }
+        }
+    }
+
+
+    //retourner un tableau d'élément de menu formaté
+
+    return $items;
 }
