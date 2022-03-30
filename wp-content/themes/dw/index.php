@@ -13,7 +13,7 @@
                             <p class="post__meta">Publié par <?= get_the_author(); ?> le <time class="post__date" datetime="<?= get_the_date('c'); ?>"><?= get_the_date(); ?></time></p>
                         </header>
                         <figure class="post__fig">
-                            <?= get_the_post_thumbnail(null, 'medium_large', ['class' => 'post__thumb']); ?>
+                            <?= get_the_post_thumbnail(null, 'medium', ['class' => 'post__thumb']); ?>
                         </figure>
                         <div class="post__excerpt">
                             <p><?= get_the_excerpt(); ?></p>
@@ -40,7 +40,7 @@
                                 </time></p>
                         </header>
                         <figure class="trip__fig">
-                            <?= get_the_post_thumbnail(null, 'medium_large', ['class' => 'trip__thumb']); ?>
+                            <?= get_the_post_thumbnail(null, 'medium', ['class' => 'trip__thumb']); ?>
                         </figure>
                     </div>
                 </article>
@@ -68,8 +68,8 @@
 <!--                            <p class="post__meta">Publié par --><?//= get_the_author();?><!-- le <time class="post__date" datetime="--><?//= get_the_date('c');?><!--">--><?//= get_the_date();?><!--</time></p>-->
 <!--                        </header>-->
 <!--                        <figure class="post__fig">-->
-<!--                            --><?//= get_the_post_thumbnail(null, 'medium_large', ['class' => 'post__thumbnail'])?>
-<!--                            <!--<img src="#" alt="" class="post__thumb">-->
+<!--                            <?//= get_the_post_thumbnail(null, 'medium_large', ['class' => 'post__thumbnail'])?>-->
+<!--                            <img src="#" alt="" class="post__thumb">-->
 <!--                        </figure>-->
 <!--                        <div class="post__excerpt">-->
 <!--                            <p>--><?//= get_the_excerpt(); ?><!--</p>-->
@@ -77,7 +77,7 @@
 <!--                    </div>-->
 <!--                </article>-->
 <!--            --><?php //endwhile; else:?>
-<!--<!--            il n'y a pas d'article a partager-->-->
+<!--            il n'y a pas d'article a partager-->
 <!--            --><?php //endif;?>
 <!--        </div>-->
 <!--    </section>-->
@@ -92,11 +92,11 @@
 <!--                    <header class="trip__head">-->
 <!--                        <h3 class="trip__title"> --><?//= get_the_title()?><!--</h3>-->
 <!--                        <p class="trip__date"><time datetime="--><?//=date('c', strtotime(get_field('departure_date', false, false))); ?><!--" class="trip__time">-->
-<!--                                --><?//=ucfirst(date_i18n('F, Y', strtotime(get_field('departure_date', false, false)))); ?><!--</time></p>-->
+<!--                                <?//=ucfirst(date_i18n('F, Y', strtotime(get_field('departure_date', false, false)))); ?>--><!--</time></p>-->
 <!--                    </header>-->
 <!--                    <figure class="trip__fig">-->
-<!--                        --><?//= get_the_post_thumbnail(null, 'medium_large', ['class' => 'trip__thumbnail'])?>
-<!--                        <!--<img src="#" alt="" class="trip__thumbnail">-->-->
+<!--                        <?//= get_the_post_thumbnail(null, 'medium_large', ['class' => 'trip__thumbnail'])?>-->
+<!--                        <img src="#" alt="" class="trip__thumbnail">-->
 <!--                    </figure>-->
 <!--                </div>-->
 <!--            </article>-->
