@@ -18,7 +18,7 @@ mix.setPublicPath('./wp-content/themes/dw/public')
         processCssUrls: false
     })
     .browserSync({
-        proxy: 'wordpress-group-a.localhost',
+        proxy: 'wordpress',
         notify: false
     })
     .version();

@@ -2,7 +2,7 @@
 
     <main class="layout">
         <section class="results">
-            <h2>Articles correspondant à votre recherche</h2>
+            <h2><?=__('Articles correspondant à votre recherche', 'dw');?></h2>
             <div class="results__container">
                 <?php if(have_posts()): while(have_posts()): the_post(); ?>
                     <article class="post">
@@ -22,13 +22,13 @@
                     </article>
                 <?php endwhile; else: ?>
                     <div class="results__empty">
-                        <p>Il n'y a pas d'articles pour votre recherche.</p>
+                        <p><?=__('Il n\'y a pas d\'articles pour votre recherche.');?></p>
                     </div>
                 <?php endif; ?>
             </div>
         </section>
         <section class="results">
-            <h2>Voyages correspondant à votre recherche</h2>
+            <h2><?= __('Voyages correspondant à votre recherche', 'dw');?></h2>
             <?php if(($trips = dw_get_trips(3, get_search_query()))->have_posts()): while($trips->have_posts()): $trips->the_post(); ?>
                 <article class="trip">
                     <a href="<?= get_the_permalink(); ?>" class="trip__link">Lire le récit de voyage "<?= get_the_title(); ?>"</a>
@@ -45,7 +45,7 @@
                     </div>
                 </article>
             <?php endwhile; else: ?>
-                <p class="results__empty">Il n'y a pas de voyages correspondant à votre recherche...</p>
+                <p class="results__empty"><?=__('Il n\'y a pas de voyages correspondant à votre recherche...', 'dw');?></p>
             <?php endif; ?>
         </section>
     </main>

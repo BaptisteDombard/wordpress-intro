@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Thème de test\n"
+"POT-Creation-Date: 2022-05-04 08:48+0100\n"
+"PO-Revision-Date: 2022-05-04 08:48+0100\n"
+"Last-Translator: \n"
+"Language-Team: Baptiste\n"
+"Language: nl_BE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: footer.php:3
+msgid "Pied de page"
+msgstr "Pied de page"
+
+#: header.php:16
+msgid "Navigation principale"
+msgstr "Navigation principale"
+
+#: header.php:54
+msgid "Votre recherche"
+msgstr "Votre recherche"
+
+#: index.php:5
+msgid "Mes derniers articles"
+msgstr "Mes derniers articles"
+
+#: search.php:5
+msgid "Articles correspondant à votre recherche"
+msgstr "Articles correspondant à votre recherche"
+
+#: search.php:25
+msgid "Il n'y a pas d'articles pour votre recherche."
+msgstr "Il n'y a pas d'articles pour votre recherche."
+
+#: search.php:31
+msgid "Voyages correspondant à votre recherche"
+msgstr "Voyages correspondant à votre recherche"
+
+#: search.php:48
+msgid "Il n'y a pas de voyages correspondant à votre recherche..."
+msgstr "Il n'y a pas de voyages correspondant à votre recherche..."
+
+#: single-trip.php:12
+msgid "Détails du voyage"
+msgstr "Détails du voyage"
+
+#: single-trip.php:14
+msgid "Date de départ"
+msgstr "Date de départ"
+
+#: single-trip.php:19
+msgid "Date de retour"
+msgstr "Date de retour"
+
+#: single-trip.php:25
+msgid "Aucune date de retour de prévue pour le moment"
+msgstr "Aucune date de retour de prévue pour le moment"
+
+#: template-contact.php:43
+msgid "conditions générales d'utilisation"
+msgstr "conditions générales d'utilisation"
+
+#: template-contact.php:43
+msgid "J'accepte les :conditions"
+msgstr "J'accepte les :conditions"
